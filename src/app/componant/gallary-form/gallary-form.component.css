@@ -1,0 +1,54 @@
+.gallary-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type:none;
+  }
+  
+  span{
+    height: 80vh;
+    flex-grow: 1;
+    padding-right: 7px ;
+    padding-bottom: 7px ;
+  }
+  
+  span:last-child {
+    flex-grow: 10;
+  }
+  
+  img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+  
+  
+  @media (max-aspect-ratio: 1/1) {
+    span {
+      height: 30vh;
+    }
+  }
+  
+  
+  @media (max-height: 480px) {
+    span {
+      height: 80vh;
+    }
+  }
+  
+  
+  @media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+    .gallary-list {
+      flex-direction: row;
+    }
+  
+    span {
+      height: auto;
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      max-height: 75vh;
+      min-width: 0;
+    }
+  }

@@ -1,0 +1,68 @@
+<div class='row'>
+    <div class="col-lg-6 col-md-6">
+        <form class="mt-2 row custom-form" [formGroup]="contactForm">
+            <div class="col-lg-6 col-md-6 ">
+                <div class="form-group">
+                    <label class="form-control-placeholder" for="name">First Name*</label>
+                    <input type="text" class="form-control" formControlName="firstName" name="firstName"
+                        [ngClass]="{'is-invalid':!!formControls.firstName.invalid && (!!formControls.firstName.dirty || !!formControls.firstName.touched)}"
+                        required>
+                    <div class="invalid-feedback">
+                        Please provide a First Name.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6  ">
+                <div class="form-group">
+                    <label class="form-control-placeholder" for="name">Last Name</label>
+                    <input type="text" class="form-control" formControlName="lastName" name="LastName" required>
+                    <div class="invalid-feedback">
+                        Please provide a Last Name.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 ">
+                <div class="form-group">
+                    <label class="form-control-placeholder" for="contactNumber"> Contact Number*</label>
+                    <input type="text" class="form-control" formControlName="contactNumber" name="contactNumber"
+                        required>
+                    <div class="invalid-feedback">
+                        Please provide a valid Number.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6  ">
+                <div class="form-group">
+                    <label class="form-control-placeholder" for="name">Email Address*</label>
+                    <input type="email" class="form-control" formControlName="email" name="email"
+                        [ngClass]="{'is-invalid':!!formControls.email.invalid && (!!formControls.email.dirty || !!formControls.email.touched)}"
+                        required>
+                    <div class="invalid-feedback">
+                        Please provide a valid email id.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 ">
+                <div class="form-group">
+                    <label class="form-control-placeholder" for="remarks">Message
+                    </label>
+                    <textarea class="form-control" id="remarks" rows="3" formControlName="remarks" required></textarea>
+                </div>
+            </div>
+
+        </form>
+        <div class="form-btn">
+            <div class="d-flex justify-content-end mt-3">
+                <div class="pr-0 ">
+                    <button type="button" class="mb-1 btn btn-primary btn-block" (click)="submit()">submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-5 col-md-5">
+        <span>
+            <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814783/photostream-photos/DSC05620_qfwycq.jpg"
+                alt="Lit trees reflected in a puddle" loading="lazy">
+        </span>
+    </div>
+</div>
