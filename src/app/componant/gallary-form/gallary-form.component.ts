@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ImageService } from '../image/shared/image.service';
 
 @Component({
   selector: 'app-gallary-form',
@@ -8,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class GallaryFormComponent implements OnInit {
 
   imageArray;
-  constructor() { }
+  visibleImages:any[] = [];
+  constructor(private imageService: ImageService) {
+    this.visibleImages = this.imageService.getImages();
+  }
 
   ngOnInit(): void {
   }

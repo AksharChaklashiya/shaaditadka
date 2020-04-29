@@ -7,21 +7,28 @@ import { ContactFormComponent } from './componant/contact-form/contact-form.comp
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutFormComponent } from './componant/about-form/about-form.component';
 import { GallaryFormComponent } from './componant/gallary-form/gallary-form.component';
+import { ImageComponent } from './componant/image/image.component';
+import { ImageService } from './componant/image/shared/image.service';
+import { HttpClientModule } from  '@angular/common/http';
+import { NavbarComponent } from './componant/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactFormComponent,
     AboutFormComponent,
-    GallaryFormComponent
+    GallaryFormComponent,
+    ImageComponent,
+    NavbarComponent,
   ],
   imports: [
     FormsModule, 
     ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

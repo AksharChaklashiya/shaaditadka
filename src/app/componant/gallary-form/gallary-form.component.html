@@ -1,76 +1,11 @@
 <div>
     <div class='gallary-list'>
-        <span>
-            <img src="assets/image/IMG_20181222_163756606_HDR.jpg"
-                alt="A Toyota Previa covered in graffiti" loading="lazy">
-        </span>
-        <span>
-            <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05621_zgtcco.jpg"
-                alt="Interesting living room light through a window" loading="lazy">
-        </span>
-        <span>
-            <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05513_gfbiwi.jpg"
-                alt="Sara on a red bike" loading="lazy">
-        </span>
-        <span>
-            <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05588_nb0dma.jpg"
-                alt="XOXO venue in between talks" loading="lazy">
-        </span>
-        <span>
-            <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05459_ziuomy.jpg"
-                alt="Trees lit by green light during dusk" loading="lazy">
-        </span>
-        <span>
-            <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05586_oj8jfo.jpg"
-                alt="Portrait of Justin Pervorse" loading="lazy">
-        </span>
-        <span>
-            <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05465_dtkwef.jpg"
-                alt="Empty bike racks outside a hotel" loading="lazy">
-        </span>
-        <span>
-            <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05626_ytsf3j.jpg"
-                alt="Heavy rain on an intersection" loading="lazy">
-        </span>
-        <span>
-            <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05449_l9kukz.jpg"
-                alt="Payam Rajabi eating peanut chicken" loading="lazy">
-        </span>
-        <span>
-            <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05544_aczrb9.jpg"
-                alt="Portland skyline sunset" loading="lazy">
-        </span>
-        <span>
-            <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05447_mvffor.jpg"
-                alt="Interior at Nong's" loading="lazy">
-        </span>
-        <span>
-            <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814784/photostream-photos/DSC05501_yirmq8.jpg"
-                alt="A kimchi hotdog on a plate" loading="lazy">
-        </span>
-        <span>
-            <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814784/photostream-photos/DSC05624_f5b2ud.jpg"
-                alt="Restaurant window with graffiti saying 'water'" loading="lazy">
-        </span>
-        <span>
-            <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814784/photostream-photos/DSC05623_dcpfva.jpg"
-                alt="Portrait of Jeremy Tanner" loading="lazy">
-        </span>
-        <span>
-            <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814784/photostream-photos/DSC05515_d2gzut.jpg"
-                alt="Jordan, Sarah and Sara on red bikes, waiting" loading="lazy">
-        </span>
-        <span>
-            <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814784/photostream-photos/DSC05581_ceocwv.jpg"
-                alt="Barista wearing a hoodie saying 'Coffee Should Be Dope.'" loading="lazy">
-        </span>
-        <span>
-            <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814784/photostream-photos/DSC05517_ni2k0p.jpg"
-                alt="Payam crossing the street on a bike" loading="lazy">
-        </span>
-        <span>
-            <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814783/photostream-photos/DSC05620_qfwycq.jpg"
-                alt="Lit trees reflected in a puddle" loading="lazy">
+        <span  *ngFor="let image of visibleImages">
+            <!-- <li *ngFor="let image of (visibleImages | imageFilter:filterBy)" > -->
+                <a [routerLink] ="['/image', image.id]">
+                    <img src="{{image.url}}" loading="lazy">
+                </a>
+            <!-- </li> -->
         </span>
 
         <!--  Adding an empty <span> here so the final photo doesn't stretch like crazy. Try removing it and see what happens!  -->
