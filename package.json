@@ -24,7 +24,7 @@
     "bootstrap": "^4.4.1",
     "core-js": "^2.5.4",
     "eslint": "6.1.0",
-    "fabric": "^1.7.6",
+    "fabric": "^7.2.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
     "primeicons": "^1.0.0",
